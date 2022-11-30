@@ -1,0 +1,57 @@
+<div *ngIf="usertype=='senior'; then s else j">
+
+</div>
+<ng-template #j>
+    junior
+</ng-template>
+<ng-template #s>
+    senior
+</ng-template>
+
+<div *ngIf="isallowed">
+    helloworld
+</div>
+
+<table class="table table-primary">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let s of students">
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.gender}}</td>
+        <td>{{s.phonenumber}}</td>
+        <td>{{s.email}}</td>
+    </tr>
+</table>
+
+<table class="table table-primary">
+    <tr>
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Total Amount</th>
+        <th>NO of Seats</th>
+    </tr>
+    <tr *ngFor="let c of courses">
+        <td>{{c.name}}</td>
+        <td>{{c.duration}}</td>
+        <td>{{c.total_amount}}</td>
+        <td>{{c.no_of_seats}}</td>
+
+    </tr>
+</table>
+<p [style.color]="showred==true?'red':'black'" [style.font-size]="showfontsize==true?'20':'30'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos doloremque ullam dolore veritatis sequi mollitia amet iure? Nemo ea expedita nihil amet tempore? Doloribus, incidunt? Corporis qui mollitia saepe voluptates.</p>
+<p [ngStyle]="{'color':'red','fontsize':'25px'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus beatae eum fugiat possimus commodi totam eveniet. Vero, vel, nemo consequatur animi quis adipisci iusto numquam impedit sapiente perferendis id deserunt.</p>
+<p [ngStyle]="{'color':displayblue==true?'blue':'green'}">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut rem, debitis asperiores ab impedit voluptate facilis obcaecati numquam dolor consequuntur quasi doloremque eligendi suscipit delectus. Reiciendis vitae similique quam cum!</p>
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">red</p>
+    <p *ngSwitchCase="'green'">green</p>
+    <p *ngSwitchCase="'blue'">blue</p>
+    <p *ngSwitchCase="'black'">black</p>
+    <p *ngSwitchDefault>no color</p>
+</div>

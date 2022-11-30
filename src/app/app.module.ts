@@ -9,6 +9,13 @@ import { CourseComponent } from './course/course.component';
 import { EventComponent } from './event/event.component';
 import { PlacementComponent } from './placement/placement.component';
 import { FooterComponent } from './footer/footer.component';
+import { DocumentComponent } from './document/document.component';
+import { AngularComponent } from './angular/angular.component';
+import { ClassComponent } from './class/class.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FormsModule } from '@angular/forms';
+import { ApiService } from './api.service';
+import{ HttpClientModule} from '@angular/common/http'
 
 
 
@@ -21,13 +28,20 @@ import { FooterComponent } from './footer/footer.component';
     EventComponent,
     PlacementComponent,
     FooterComponent,
+    DocumentComponent,
+    AngularComponent,
+    ClassComponent,
+    PagenotfoundComponent,
+    
  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent ]
 })
 export class AppModule { }

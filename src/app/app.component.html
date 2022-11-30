@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-12">
         <app-header></app-header>
@@ -47,6 +47,110 @@
     
   
     
-  
+   -->
+   <!-- <app-angular></app-angular> -->
+   <!-- <app-class></app-class> -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="header">
+    
+        <div class="header-right">
+          <a class="active" ><font color="white">Home</font></a>
+          
+          <a ><font color="white">Placement</font></a>
+          <a href=""><font color="white">Course</font></a>
+          <a href=""><font color="white">Event</font></a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="sidenav">
+          <a [routerLink]="'Home'">Home</a>
+          <a [routerLink]="'Placement'">Placement</a>
+          <a [routerLink]="'Course'">Course</a>
+          <a [routerLink]="'Event'">Event</a>
+        </div>
+      
+      </div>
+      <div class="col-md-10">
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <h1 align="center">Sign Up</h1>
+      <form action="" #form="ngForm" (ngSubmit)="submit(form.value)">
+      <label for="">Name</label>
+      <input #name="ngModel" type="text" name="name" id="" ngModel required>
+      <span *ngIf="name.touched && name.errors?.['required']">please enter name</span>
+     
+      <br>
+      <label for="">Age</label>
+      <input #age="ngModel" type="text" name="age" id="" ngModel required>
+      <span *ngIf="age.touched && age.errors?.['required']">please enter age</span>
+      <label for="">Phone number</label>
+      <input #phone="ngModel" type="text" name="phone" id="" ngModel required>
+      <span *ngIf="phone.touched && phone.errors?.['required']">please enter your phone number</span>
+      <label for="">Email</label>
+      <input #email="ngModel" type="text" name="email" id="" ngModel required>
+      <span *ngIf="email.touched && email.errors?.['required']">please enter the email</span>
+      <label for="">Password</label>
+      <input #password="ngModel" type="text" name="password" id="" ngModel required>
+      <span *ngIf="password.touched && password.errors?.['required']">please enter password</span>
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+  </div>
+</div> -->
+
+  <h1>machinetest</h1>
+  <br>
+  <div class="col">
+   
+      <select #subjects (change)="onSelected(subjects.value)">
+        <option default>monday</option>
+        <option>tuesday</option>
+        <option>wednesday</option>
+        <option>thursday</option>
+        <option>friday</option>
+        <option>saturday</option>
+      </select>
+    </div>
+  <br><br>
+  <table class="table table-primary" *ngIf="timetable">
+    <tr>
+        <th>#</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+    </tr>
+    <tr *ngFor="let t of timetable;" (click)="highlightRow(t)"
+    [ngClass] = "{'highlight' : t.subject == selectedName}">
+        <td>{{t.subject}}</td>
+        <td>{{t.a}}</td>
+        <td>{{t.b}}</td>
+        <td>{{t.c}}</td>
+        <td>{{t.d}}</td>
+        <td>{{t.e}}</td>
+        <td>{{t.f}}</td>
+        <td>{{t.g}}</td>
+    </tr>
+</table>
 </body>
 </html>
+
+<!-- <app-document></app-document> -->
