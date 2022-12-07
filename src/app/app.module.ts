@@ -15,7 +15,8 @@ import { ClassComponent } from './class/class.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './api.service';
-import{ HttpClientModule} from '@angular/common/http'
+import{ HttpClientModule} from '@angular/common/http';
+import { EditstudentComponent } from './editstudent/editstudent.component'
 
 
 
@@ -32,6 +33,7 @@ import{ HttpClientModule} from '@angular/common/http'
     AngularComponent,
     ClassComponent,
     PagenotfoundComponent,
+    EditstudentComponent,
     
  
   ],

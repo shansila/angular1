@@ -7,6 +7,14 @@ import { ApiService } from '../api.service';
   styleUrls: ['./document.component.css']
 })
 export class DocumentComponent implements OnInit {
+
+student_list:any=[]
+get_students(){
+  this.service.load_students().subscribe(res=>{
+    this.student_list=res
+    console.log(this.student_list)
+  })
+}
 response:any={}
 message:string=''
   submit(formdata:any){
@@ -24,9 +32,24 @@ message:string=''
  
 
   }
+
   constructor(private service : ApiService) { }
 
   ngOnInit(): void {
+    // this.loadstudent()
+  }
+  // loadstudent(){
+  //   this.service.student_list().subscribe(res=>{
+  //     this.studentdata=res
+  //     console.log(this.studentdata)
+      
+  //   })
+  // }
+  deletestudent(id:number){
+    this.service.deletestudent(id).subscribe(res=>{
+      console.log(res)
+      // this.loadstudent()
+    })
   }
 
 }

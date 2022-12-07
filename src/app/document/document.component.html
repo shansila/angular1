@@ -41,6 +41,29 @@
           {{message}}
           </div>
         </div>
-      </div>  
+      </div> 
+      <br>
+      <table class="table table-primary">
+        <tr>
+            <th>Studentname</th>
+            <th>Gender</th>
+            <th>Phonenumber</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+        <tr *ngFor="let student of student_list">
+            <td>{{student.s_name}}</td>
+            <td>{{student.s_gender}}</td>
+            <td>{{student.s_phone}}</td>
+            <td>{{student.s_address}}</td>
+            <td>{{student.s_email}}</td>
+            <td>{{student.s_username}}</td>
+            <td>{{student.s_passwd}}</td>
+            <td><button class="btn btn-primary" >update</button></td>
+            <td><button class="btn btn-primary" (click)="deletestudent(student.id)">delete</button></td>
+        </tr>
+    </table>
 </body>
 </html>
